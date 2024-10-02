@@ -1,0 +1,59 @@
+:root{
+    --tile: lightblue;
+    --tile-border: gray;
+    --background: beige;
+}
+
+body{
+    background-color: var(--background)
+}
+
+main{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+}
+
+.row .square{
+    height: 100px;
+    width: 100px;
+    background-color: var(--tile);
+    border: 1px solid var(--tile-border);
+}
+
+.white.circle{
+    background-color: white;
+}
+
+.black.circle{
+    background-color: black;
+}
+
+.circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+div[piece="w"]{
+    background: url(whitepiece.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+div[piece="b"]{
+    background: url(blackpiece.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+div[piece="w"]:hover, div[piece="b"]:hover {
+    box-shadow: inset 0px 0px 11px 2px goldenrod;
+    transition: 0.25s ease;
+}
